@@ -1,12 +1,58 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        String opcion;
 
-        Object moneda = "23.5";
+        do{
+            System.out.println("""
+                    *********************************************
+                    Bienvenido(a) al conversor de monedas
+                    
+                    1) Colones costarricenses ->> Dólar
+                    2) Dólar ->> Colones costarricenses
+                    3) Colones costarricenses ->> Peso mexicano
+                    4) Peso mexicano ->> Colones costarricenses
+                    5) Colones costarricenses ->> Euros
+                    6) Euros ->> Colones costarricenses
+                    7) Salir
+                    *********************************************
+                    """);
 
-        if(!(moneda instanceof Double d)){
-            System.out.println("Volver al menu");
-        }else{
-            System.out.println("convertir moneda");
-        }
+
+            System.out.print("Digita tu opción --> ");
+            opcion = entrada.nextLine();
+            SubMenu subMenu = new SubMenu();
+
+            switch (opcion){
+                case "1":
+                    subMenu.obtenerMonto("CRC", "USD");
+                    break;
+                case "2":
+                    subMenu.obtenerMonto("USD", "CRC");
+                    break;
+                case "3":
+                    subMenu.obtenerMonto("CRC", "MXN");
+                    break;
+                case "4":
+                    subMenu.obtenerMonto("MXN", "CRC");
+                    break;
+                case "5":
+                    subMenu.obtenerMonto("CRC", "EUR");
+                    break;
+                case "6":
+                    subMenu.obtenerMonto("EUR", "CRC");
+                    break;
+                case "7":
+                    System.out.println("Finalizando programa...");
+                    break;
+                default:
+                    System.out.println("\nOpción inválida. Intemte de nuevo. \n");
+            }
+
+        }while(!opcion.equals("7"));
+
     }
 }
