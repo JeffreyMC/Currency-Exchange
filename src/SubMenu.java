@@ -12,7 +12,7 @@ public class SubMenu {
 
             GetCurrencyConverted convertirMonto = new GetCurrencyConverted();
             Currency montoConvertido = convertirMonto.obtenerTipoDeCambio(base_code,
-                    target_code, (double)monto);
+                    target_code, monto);
 
             System.out.println("\nEl valor " + monto +
                     " (" + base_code + ") corresponde al valor final" +
