@@ -18,6 +18,7 @@ public class Main {
                     5) Colones costarricenses ->> Euros
                     6) Euros ->> Colones costarricenses
                     7) Salir
+                    
                     *********************************************
                     """);
 
