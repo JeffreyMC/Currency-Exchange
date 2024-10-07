@@ -8,7 +8,7 @@ public class SubMenu {
         System.out.print("\nDigite el monto que desea convertir: ");
 
         try {
-            Double monto = entrada.nextDouble();
+            double monto = entrada.nextDouble();
 
             GetCurrencyConverted convertirMonto = new GetCurrencyConverted();
             Currency montoConvertido = convertirMonto.obtenerTipoDeCambio(base_code,
