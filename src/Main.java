@@ -27,28 +27,14 @@ public class Main {
             SubMenu subMenu = new SubMenu();
 
             switch (opcion){
-                case "1":
-                    subMenu.obtenerMonto("CRC", "USD");
-                    break;
-                case "2":
-                    subMenu.obtenerMonto("USD", "CRC");
-                    break;
-                case "3":
-                    subMenu.obtenerMonto("CRC", "MXN");
-                    break;
-                case "4":
-                    subMenu.obtenerMonto("MXN", "CRC");
-                    break;
-                case "5":
-                    subMenu.obtenerMonto("CRC", "EUR");
-                    break;
-                case "6":
-                    subMenu.obtenerMonto("EUR", "CRC");
-                    break;
-                case "7":
-                    System.out.println("Finalizando programa...");
-                    break;
-                default:
+                case "1" -> subMenu.obtenerMonto("CRC", "USD");
+                case "2" -> subMenu.obtenerMonto("USD", "CRC");
+                case "3" -> subMenu.obtenerMonto("CRC", "MXN");
+                case "4" -> subMenu.obtenerMonto("MXN", "CRC");
+                case "5" -> subMenu.obtenerMonto("CRC", "EUR");
+                case "6" -> subMenu.obtenerMonto("EUR", "CRC");
+                case "7" -> System.out.println("Finalizando programa...");
+                default ->
                     System.out.println("\nOpción inválida. Intemte de nuevo. \n");
             }
 
